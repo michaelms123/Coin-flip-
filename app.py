@@ -17,7 +17,7 @@ def toss_coin(n):
     outcome_no = 0
     outcome_1_count = 0
 
-    for r in trial outcomes: 
+    for r in trial_outcomes: 
         outcome_no +=1
         if r == 1: 
             outcome_1_count += 1
