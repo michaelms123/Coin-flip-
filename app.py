@@ -11,7 +11,7 @@ if 'df_experiment_results' not in st.session_state:
 st.header('Tossing a Coin')
 
 chart = st.line_chart([0.5])
-def toss_coin:
+def toss_coin(n):
     trial_outcomes = scipy.stats.bernoulli.rvs(p=0.5, size=n)
     mean = None
     outcome_no = 0
