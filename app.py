@@ -8,11 +8,15 @@ if 'experiment_no' not in st.session_state:
 
 if 'df_experiment_results' not in st.session_state:
     st.session_state['df_experiment_results'] = pd.DataFrame(columns=['no', 'iterations', 'mean'])
+
 st.header('Tossing a Coin')
 
 chart = st.line_chart([0.5])
+
 def toss_coin(n):
+
     trial_outcomes = scipy.stats.bernoulli.rvs(p=0.5, size=n)
+
     mean = None
     outcome_no = 0
     outcome_1_count = 0
@@ -33,4 +37,3 @@ start_button = st.button('Run')
 if start_button:
     st.write(f"Running the experiment of {number_of_trials} trials")
     mean = toss_coint(number_of_trials)
-
